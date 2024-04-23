@@ -1,19 +1,14 @@
 package com.luciorim.techtask.service.impl;
 
-import com.luciorim.techtask.constants.Role;
-import com.luciorim.techtask.dto.request.RequestRegisterUserDto;
 import com.luciorim.techtask.dto.response.ResponseUserDto;
 import com.luciorim.techtask.exceptions.DbObjectNotFoundException;
 import com.luciorim.techtask.mapper.UserMapper;
 import com.luciorim.techtask.model.User;
 import com.luciorim.techtask.repository.UserRepository;
-import com.luciorim.techtask.service.ImageService;
 import com.luciorim.techtask.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 

@@ -74,7 +74,7 @@ public class AuthServiceImpl implements AuthService {
     @Override
     public ResponseAuthDto authenticateUser(RequestAuthDto authRequest) {
         User user = userRepository.findUserByEmail(authRequest.getEmail())
-                .orElseThrow(() -> new DbObjectNotFoundException("User with email {} doesn't exists", authRequest.getEmail()));
+                .orElseThrow(() -> new DbObjectNotFoundException(HttpStatus.BAD_REQUEST.getReasonPhrase(), "User doesn't exist"));
 
         if(!passwordEncoder.matches(authRequest.getPassword(), user.getPassword())){
             throw new IllegalArgumentException("Passwords do not match");
