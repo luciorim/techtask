@@ -16,7 +16,7 @@ public interface UserMapper extends BaseMapper<User, ResponseUserDto> {
         responseUserDto.setLastName(user.getLastName());
         responseUserDto.setEmail(user.getEmail());
         if(user.getImageUrl() != null){
-            responseUserDto.setProfileImageUrl(ServletUriComponentsBuilder.fromCurrentContextPath().toUriString() + "/images/" + user.getImageUrl());
+            responseUserDto.setProfileImageUrl(ServletUriComponentsBuilder.fromCurrentContextPath().toUriString() + "/api/images/" + user.getImageUrl());
         }
         return responseUserDto;
     }
