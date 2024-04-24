@@ -1,3 +1,5 @@
+
+
 plugins {
     java
     id("org.springframework.boot") version "3.2.5"
@@ -8,6 +10,7 @@ group = "com.luciorim"
 version = "0.0.1-SNAPSHOT"
 
 java {
+    targetCompatibility = JavaVersion.VERSION_21
     sourceCompatibility = JavaVersion.VERSION_21
 }
 
@@ -16,6 +19,7 @@ configurations {
         extendsFrom(configurations.annotationProcessor.get())
     }
 }
+
 
 repositories {
     mavenCentral()
@@ -43,3 +47,6 @@ dependencies {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
+
+rootProject.extra["spring-boot.build-image.imageName"] = "com.luciorim"
