@@ -18,15 +18,13 @@ services:
 
   app:
     container_name: techtask-app
-    build: .
-#    image: techtask-app:latest
+#    build: .
+    image: taskapp
     environment:
       DATABASE_DOMAIN: postgres
       DATABASE_PORT: 5432
       DATABASE_NAME: techtask
       DATABASE_USERNAME: postgres
       DATABASE_PASSWORD: postgres
-    ports:
-      - "8181:8181"
     depends_on:
       - postgres

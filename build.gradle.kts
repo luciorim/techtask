@@ -48,5 +48,19 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
+//tasks.withType<Jar>() {
+//
+//    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+//
+////    manifest {
+////        attributes["Main-Class"] = "com.luciorim.techtask.TechtaskApplication"
+////    }
+//
+////    configurations["compileClasspath"].forEach { file: File ->
+////        from(zipTree(file.absoluteFile))
+////    }
+//}
+
+
 
 rootProject.extra["spring-boot.build-image.imageName"] = "com.luciorim"
