@@ -1,6 +1,7 @@
 package com.luciorim.techtask;
 
 import com.luciorim.techtask.service.ImageService;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
@@ -16,6 +17,7 @@ public class TechtaskApplication implements WebMvcConfigurer {
 
     @Value("${application.delete-all-files}")
     private Boolean deleteAllFiles;
+
 
     public static void main(String[] args){
         SpringApplication.run(TechtaskApplication.class, args);
