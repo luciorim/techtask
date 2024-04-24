@@ -16,7 +16,7 @@ public interface NewsMapper extends BaseMapper<News, ResponseNewsDto> {
         newsDto.setContent(news.getContent());
         newsDto.setCreatedAt(news.getCreatedAt());
         if(news.getTitleImageUrl() != null){
-            newsDto.setTitleImageUrl(ServletUriComponentsBuilder.fromCurrentContextPath().toUriString() + "/images/" + news.getTitleImageUrl());
+            newsDto.setTitleImageUrl(ServletUriComponentsBuilder.fromCurrentContextPath().toUriString() + "/api/images/" + news.getTitleImageUrl());
         }
         return newsDto;
     }
