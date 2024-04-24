@@ -1,7 +1,5 @@
 # TaskApp
 
-This repository contains a task management application.
-
 ## Instructions for Running
 
 To run this application, follow these steps:
