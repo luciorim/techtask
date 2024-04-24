@@ -34,6 +34,9 @@ public class OrderServiceImpl implements OrderService {
     @Transactional
     public void createOrder(RequestCreateOrderDto requestCreateOrderDto) {
         List<Long> productsId = requestCreateOrderDto.getProducts();
+        if(productsId == null || productsId.isEmpty()) {
+            throw new IllegalArgumentException("Product list cannot be empty");
+        }
 
         Double totalPrice = 0.0;
 
