@@ -27,9 +27,12 @@ application:
       refresh-token:
         expiration: 604800000
 
-#logging:
-#  level:
-#    org:
-#      springframework:
-#        security: DEBUG
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+
+#server:
+#  forward-headers-strategy: framework
 

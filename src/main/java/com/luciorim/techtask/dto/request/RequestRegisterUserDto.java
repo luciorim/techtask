@@ -1,5 +1,6 @@
 package com.luciorim.techtask.dto.request;
 
+import jakarta.annotation.Nullable;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Builder;
@@ -27,5 +28,6 @@ public class RequestRegisterUserDto {
     @NotNull
     private String email;
 
+    @Nullable
     private MultipartFile profilePicture;
 }
