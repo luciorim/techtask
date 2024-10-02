@@ -25,8 +25,8 @@ services:
 
   app:
     container_name: techtask-app
-#    build: .
-    image: taskapp
+    build: .
+    # image: taskapp
     environment:
       DATABASE_DOMAIN: postgres
       DATABASE_PORT: 5432
